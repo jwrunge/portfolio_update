@@ -1,0 +1,171 @@
+body
+{
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+}
+
+#bg
+{
+	min-width: 100%;
+	min-height: 2000px;
+	min-height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url('../media/barn.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: bottom left;
+	z-index: -100;
+}
+
+h1
+{
+	color: white;
+	font-family: 'Patua One', serif;
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+h2
+{
+	font-family: 'Patua One', serif;
+	margin: 0;
+	padding: 0;
+	color: rgb(215,201,140);
+	font-size: 1.5em;
+}
+
+p
+{
+	color: white;
+	font-size: 1em;
+	margin: 0;
+	padding: .2em .5em;
+}
+
+#header
+{
+	position: absolute;
+	bottom: 2em;
+	padding: .5em;
+}
+
+p.subhead
+{
+	color: white;
+	font-size: 1em;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+
+#contentbox
+{
+	position: absolute;
+	top: 0;
+	padding: 0;
+	width: 100%;
+	background-color: rgba(92, 51, 23, .5);
+}
+
+#text
+{
+	display: block;
+	height: 30vh;
+	overflow: auto;
+	padding: 1em;
+}
+
+#page_position
+{
+	text-align: center;
+	color: white;
+
+	width: 90%;
+	padding: 1em 5% 0 5%;
+}
+
+#menu
+{
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: rgb(215,201,140);
+	width: 80%;
+	margin: 0 auto;
+}
+
+#menu a { margin: .5em; }
+
+a
+{
+	color: rgb(215,201,140);
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+a:visited
+{
+	color: rgb(215,201,140);
+}
+
+a.selected
+{
+	color: rgb(255, 238, 166);
+}
+
+img.decorativeborder {display: none;}
+
+/*
+	WIDESCREEN
+*/
+
+@media screen and (min-width: 1000px)
+{
+
+	h1
+	{
+		font-size: 3em;
+	}
+
+	#header
+	{
+		position: absolute;
+		top: 10vh;
+		left: 5%;
+		padding: 2em;
+	}
+	
+	#contentbox
+	{
+		position: absolute;
+		top: 6vh;
+		right: 5%;
+		width: 40%;
+		margin: 0;
+		padding: 2em;
+	}
+	
+	#text { padding: 0; }
+	
+	h1
+	{
+		color: rgb(118, 41, 25);
+	}
+
+	
+	p.subhead
+	{
+		color: rgb(118, 41, 25);
+		font-size: 2em;
+	}
+	
+	img.decorativeborder {position: absolute; display: block;}
+	#tl { top: -3px; left: -3px; }
+	#tr { top: -3px; right: -3px; }
+	#bl { bottom: -3px; left: -3px; }
+	#br { bottom: -3px; right: -3px; }
+}

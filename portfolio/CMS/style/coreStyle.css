@@ -1,0 +1,445 @@
+/*
+    GENERAL DOCUMENT PROPERTIES
+*/
+html
+{
+	overflow: hidden;
+	height: 100%;
+}
+
+body
+{
+    background-color: white;    /*Set BG color to white*/
+	font-size: 18px;			/*Base font size*/
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#main_content
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	top: 0px; left: 0px; right: 0px; bottom: 0px;
+	height: 100vh;
+}
+
+h1, h2, h3
+{
+	font: normal normal normal 2em "Muli", sans-serif;    /*Muli imported as Google font in HTML files*/
+	color: rgb(192,0,0);
+	margin: 0;
+    padding: .5em 0 0 0;
+}
+
+h2 { font-size: 1.5em; }
+
+h3 { font-size: 1.2em; color: black; }
+
+p
+{
+	font: normal normal normal 1em georgia, "Times New Roman", serif;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.mce-content-body
+{
+	overflow-y: scroll;
+}
+
+/*
+	NAVIGATION MENU
+*/
+
+#nav 
+{
+	position: absolute;
+}
+
+#admin_links /* Span in navigation.php - gives dash | logout option when signed in */
+{
+	display: inline-block;
+	font-family: "Muli", sans-serif;
+	color: white;
+	padding: 0 10px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 998;
+	background-color: black;
+	border-top-right-radius: 25px;
+}
+
+#mobile_links /* mobile next, previous, and menu buttons */
+{
+	display: inline-block;
+	margin-bottom: 1em;
+	line-height: 100%;
+	margin: .5em;
+}
+
+#mobile_links .center_links
+{
+	display: inline-block;
+	width: 5em;
+	text-align: center;
+}
+
+#desktop_links /* main dsktop links */
+{
+	display: none;
+}
+
+#main_content
+{
+	position: relative;
+}
+
+#menu_links /* all menu links, mobile and desktop (divided by other spans and divs) */
+{
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	z-index: 1001;
+	background-color: rgb(190,0,0);
+	background-image: url('../media/core/attentionBG.png');
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#menu_links h2
+{
+	margin-left: 5px;
+	font-size: 1.5em;
+	color: white;
+	display: block;
+}
+
+.nav_links
+{
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.nav_links a /* display individual nav links as block for list-style in mobile mode */
+{
+	display: block;
+}
+
+ul
+{
+	margin: 1em 0;
+}
+
+
+/*
+	ANCHOR COLORING AND FEATURES
+*/
+
+a
+{
+	color: rgb(192,0,0);
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+p>a
+{
+	white-space: normal;
+}
+
+#menu_links a
+{
+	color: white;
+}
+
+#nav a, .nav_links a, .link_block a
+{
+	font-size: 1.5em;
+    font-family: "Muli", sans-serif;    /*Muli imported as Google font in HTML files*/
+	text-decoration: none;
+	color: white;
+	margin: 10px;
+}
+
+.nav_links a, .link_block a  { font-size: 1em; }
+
+#location a, #copyright a { color: yellow; }
+
+#mobile_links a 
+{
+	margin: 0 1em;
+}
+
+#admin_links a {font-size: .8em;}
+
+/*Previous and next button display turned off to accommodate VERY small screens; undone in responsive section*/
+#previous_button
+{
+	display: none;
+}
+
+#next_button
+{
+	display: none;
+}
+	
+
+
+/*
+    LAYOUTS
+*/
+
+.screen
+{
+	min-height: 500px;  /*Fallback if vh is unsupported*/
+	min-height: 100vh;
+	width: 100%;
+}
+
+.entry
+{
+    width: 90%;
+    margin: 0 auto 0 auto;
+    padding: 1em;
+	clear: both;
+}
+
+.entry img
+{
+	float: none;
+	max-width: 100%;
+	max-height: 300px;
+	max-height: 50vh;
+	display: block;
+	margin: 10px auto;
+}
+
+/*
+    CONTENT SCREENS
+*/
+
+#content_screen
+{
+	min-height: 300px;
+	min-height: 70vh;
+	width: 100%;
+	
+	position: relative;
+	background-image: url('../media/group.jpg');
+	background-repeat: no-repeat;
+	/*background-attachment: fixed;*/
+	background-size: cover;
+	background-position: center center;
+	
+	box-shadow: 0 0 .8em rgba(0,0,0,.7);
+}
+
+#content_screen > #content_pos
+{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#content_screen h1
+{
+    font-size: 2.5em; /*For VERY small screens; increased in responsive section*/
+    color: white;
+    text-shadow: 2px 2px 2px black;
+	padding-bottom: 10px;
+}
+
+#copyright
+{
+	clear: both;
+	color: white;
+	background-color: rgb(192,0,0);
+    position: relative;
+    bottom: 0;
+	padding: 1em .5em 1em .5em;
+	box-shadow: 0 0 .5em rgba(0,0,0,.7);
+}
+
+/*
+	WORSHIP TIMES 
+*/
+#attention_box
+{	
+	box-shadow: -.1em .1em .5em rgba(0,0,0,.7);
+	border-radius: 10px;
+}
+
+#worship_time_p
+{
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-image: url('../media/core/attentionBG.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	padding: 5px 10px;
+	margin: 0 auto;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: black;
+}
+
+#worship_time_p h3
+{
+	font-size: 1.25em;
+	text-align: center;
+	color: white;
+}
+
+#logistics
+{
+	text-align: center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: black;
+	padding: 0 10px 3px 10px;
+	margin: 0 auto;
+	font-size: .75em;
+	color: white;
+}
+
+#logistics p 
+{
+	padding: 8px 0;
+	margin: 0;
+}
+
+#worship_time_p a, #logistics a 
+{
+	color: yellow;
+}
+
+#worship_time_p a:hover, #logistics a:hover
+{
+	color: orange;
+}
+
+
+/*
+	RESPONSIVITY
+*/
+/*Navigation adjustment in case of narrow screen (does not account for mobile device)*/
+/*NOTE: For revision, anything less than 800px wide should go into mobile mode*/
+
+@media only screen and (min-width: 315px) 
+{
+	body
+	{
+		font-size: 20px;
+	}	
+}
+
+@media only screen and (min-width: 420px) 
+{
+	body
+	{
+		font-size: 24px;
+	}	
+}
+
+@media only screen and (min-width: 530px) 
+{
+	#content_screen h1
+	{
+		font-size: 3.5em;
+	}	
+}
+
+@media only screen and (min-width: 770px) 
+{
+	#menu_links
+	{
+		display: block;
+		position: fixed;
+		left: 0;
+		width: 100%;
+		height: 0;
+		padding: 0;
+		background-color: transparent;
+		background-image: none;
+		text-align: center;
+		overflow: visible;
+		z-index: 2000;
+	}
+	
+	#menu_links h2
+	{
+		display: none;
+	}
+	
+	#menu_links br
+	{
+		display: hidden;
+	}
+	
+	#menu_links a:hover
+	{
+		color: yellow;
+	}
+	
+	.nav_links
+	{
+		display: none;
+		width: auto;
+		min-width: 250px;
+		background-color: rgb(190,0,0);
+		position: absolute;
+		top: 0;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	
+	#mobile_links
+	{
+		display: none;
+	}
+
+	#desktop_links
+	{
+		display: block;
+	}
+	
+	#desktop_links a
+	{
+		font-size: 1.5em;
+	}
+	
+	#admin_links a {font-size: .8em;}
+	
+	#nav a:hover, .nav_links a:hover, .link_block a:hover { color: yellow; }
+
+	a:hover, #copyright a:hover, #location a:hover {color: orange;}
+	
+	.entry img
+	{
+		margin-top: 1em;
+		max-width: 40%;
+	}
+	
+	.entry img.float_right {float: right; margin-left: 1em;}
+	.entry img.float_left {float: left; margin-right: 1em;}
+}
+
+@media only screen and (min-width: 900px) 
+{
+	body
+	{
+		font-size: 30px;
+	}
+}

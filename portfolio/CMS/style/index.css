@@ -1,0 +1,146 @@
+/*
+	CONTENT SCREENS
+*/
+#screen_1
+{
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,.8)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,.8)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,.8)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,.8)); /* Standard syntax (must be last) */
+	
+	border-bottom-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 1px;
+}
+
+#screen_2, #screen_3, #screen_4 { background: white; }
+
+#screen_2 > .imgDiv
+{
+    background-image: url('../media/comm.jpg');
+    background-position: center center;
+}
+
+#screen_3 > .imgDiv
+{
+    background-image: url('../media/sunday_school_libby.JPG');
+	background-position: 50% 40%;
+}
+
+#screen_4 > .imgDiv
+{
+    background-image: url('../media/outreach.jpg');
+	background-position: 50% 40%;
+}
+
+.imgDiv
+{
+    width: 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: cover;
+    text-align: center;
+	box-shadow: 0 0 .5em rgba(0,0,0,.7);
+}
+
+.imgDiv > h1
+{
+    font-size: 3em; /*For VERY small screens; increased in responsive section*/
+    color: white;
+    padding: 50px 0;
+    text-shadow: 2px 2px 2px black;
+}
+
+.link_block /*The link list under each section header*/
+{
+	clear: both;
+	width: 100%;
+	background-color: rgb(190,0,0);
+	padding: 5px 0;
+	text-align: center;
+	box-shadow: 0 0 .8em rgba(0,0,0,.7);
+}
+
+.link_block a { display: block; margin: .5em; }
+
+
+/*
+	LOGO INITIAL PROPERTIES (mobile)
+*/
+#logo
+{
+    display: none;
+    width: 98%;
+    padding: .5em 0 0 10px;
+}
+
+#logoMobile 
+{
+    display: block;
+    max-width: 90%;
+	max-height: 50vh;
+    padding: .5em 0 0 10px;
+}
+
+/*
+	THE LOCATION BOX (quick links menu - call, email, find, etc.)
+*/
+#location
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: -1px;
+	background-color: rgba(190,0,0,.5);
+}
+
+#sub-location img /*sub block of #location for text formatting*/
+{
+	display: inline-block;
+	padding: 5px;
+	height: 75px;
+}
+
+#worship_times {	display: none; } /*set worship times and email to invisible on mobile*/
+#email { display: none; }
+
+
+/*
+	RESPONSIVITY
+*/
+@media only screen and (min-width: 315px) /*If at least 315px, make font sizes larger*/ 
+{
+	#location { font-size: 1em; }
+	.imgDiv > h1 { font-size: 5em; }
+}
+
+@media only screen and (min-width: 641px) /*For wide-screen devices (iPad +)*/
+{
+	/*#location box shrinks*/
+	#location
+	{
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		text-align: right;
+		background-color: transparent;
+	}
+	
+	#sub-location 
+	{
+		border-top-left-radius: 25px;
+		display: inline-block;
+		background-color: rgba(190,0,0,.7);
+	}
+	
+	/*Change #location links and logo for wider display*/
+	#email { display: inline-block; }
+	#worship_times { display: inline-block; }
+	#call { display: none; }
+	
+	#logo { display: block; }
+	#logoMobile { display: none; }
+	
+	/*Link block anchors become inline*/
+	.link_block a { display: inline; margin: 0 .5em; }
+}

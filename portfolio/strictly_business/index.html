@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Strictly Business</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Anton|Quicksand|Roboto+Condensed" rel="stylesheet"> 
+	<link rel='stylesheet' type='text/css' href='style/core.css'/>
+	<script src="../../js/jquery-min.js"></script>
+</head>
+
+
+<body>
+	<div id='header'>
+		<div id='tag'>
+			<h1>A template that's <span class='bold'>strictly business</span> for sites with a lot of<br/> content to explore</h1>
+		</div>
+	</div>
+
+	<div id='linkbox'>
+		<img id='logo' alt='Strictly Business logo' src='media/logo.png'/>
+		<span id='menu'>
+			<img id='closemenu' alt='close menu' src='media/rightarrow.png'/>
+			<span class='left'>
+				<a>Products</a>
+				<a>Services</a>
+				<a>Support</a>
+			</span>
+			<span class='right'>
+				<a><img alt='search icon' src='media/search.png'/><span class='alt_image'>Search</span></a>
+				<a><img src='media/lock.png' alt='sign in icon'/><span class='alt_image'>Sign in</span></a>
+			</span>	
+		</span>
+		<a id='hamburger'>&#9776;</a>
+		<br clear='both'/>
+	</div>
+
+	<div id='searchbox'>
+		<input id='searchbar' type='text'/>
+	</div>
+
+	<div id='content'>
+		<div id='featured'>
+			<h2>Featured Products</h2>
+			<div class='scrollmenu'>
+				<img class='scrollbutton scrollleft' src='media/leftarrow.png' alt='Scroll left'/>
+				<div class='scrollable'>
+					<div class='product'>
+						<img class='product' src='media/womens.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Women's Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/stand.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Men's Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/watch.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Budget Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/fitness.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Fitness Trackers</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/bands.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Replacement Bands</div>
+					</div>
+				</div>
+				<img class='scrollbutton scrollright' src='media/rightarrow.png' alt='Scroll right'/>
+			</div>
+			
+			<h2>Biggest Deals</h2>
+			<div class='scrollmenu'>
+				<img class='scrollbutton scrollleft' src='media/leftarrow.png' alt='Scroll left'/>
+				<div class='scrollable'>
+					<div class='product'>
+						<img class='product' src='media/womens.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Women's Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/stand.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Men's Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/watch.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Budget Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/fitness.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Fitness Trackers</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/bands.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Replacement Bands</div>
+					</div>
+				</div>
+				<img class='scrollbutton scrollright' src='media/rightarrow.png' alt='Scroll right'/>
+			</div>
+			
+			<h2>Customer Favorites</h2>
+			<div class='scrollmenu'>
+				<img class='scrollbutton scrollleft' src='media/leftarrow.png' alt='Scroll left'/>
+				<div class='scrollable'>
+					<div class='product'>
+						<img class='product' src='media/womens.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Women's Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/stand.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Men's Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/watch.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Budget Watches</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/fitness.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Fitness Trackers</div>
+					</div>
+					<div class='product'>
+						<img class='product' src='media/bands.jpg' alt='product placeholder'/>
+						<div class='shadowoverlay'>Replacement Bands</div>
+					</div>
+				</div>
+				<img class='scrollbutton scrollright' src='media/rightarrow.png' alt='Scroll right'/>
+			</div>
+		</div>
+		
+		<div id='sidebar'>
+			<a>Link 3</a>
+			<a>Link 4</a>
+			<a>Link 5</a>
+			<a>Link 6</a>
+			<a>Link 7</a>
+			<a>Link 8</a>
+		</div>
+
+		<br clear='both'/>
+
+	</div><!--End content-->
+	
+	<div id='footer'>
+		<p>&copy;2017 Jacob Runge</p>
+		<a>About Us</a>
+		<a>Careers</a>
+		<a>Events</a>
+		<a>Terms</a>
+		<a>Privacy</a>
+		<a>Contact</a>
+		<a>Feedback</a>
+		
+	</div>
+</body>
+
+<script>
+	var linkbox = document.getElementById('sidebar');
+	var footer = document.getElementById('footer');
+	var minScroll = null;
+	var maxScroll = null;
+	
+	$('div.shadowoverlay').css('display', 'block');
+	
+	function scroll_window()
+	{
+		scroll_pos = document.documentElement.scrollTop;
+
+		if(window.innerWidth >= 950)
+		{
+			if(scroll_pos > minScroll)
+			{
+				if(scroll_pos + linkbox.offsetHeight + 30 < maxScroll)
+					linkbox.style.top = (scroll_pos - minScroll + 15) + 'px';
+			}
+			else
+				linkbox.style.top = '';	
+		}
+	}
+	
+	function resize_window()
+	{
+		if(window.innerWidth >= 950)
+		{
+			linkbox.style.top = '';
+			minScroll = linkbox.offsetTop - 15;
+			maxScroll = footer.offsetTop;
+			
+			scroll_window();
+			
+			//Hide elements
+			$('div.scrollable').css('overflowX', 'hidden');
+			$('div.shadowoverlay').css({'opacity': 0, 'bottom': '-3em'});
+		}
+		else
+		{
+			linkbox.style.top = '';
+			
+			//Show elements
+			$('div.scrollable').css('overflowX', 'auto');
+			$('div.shadowoverlay').css({'opacity': 1, 'bottom': 0});
+		}
+		
+		$('#menu').attr('style', '');
+			
+		//Recenter scroll buttons vertically
+		$('img.scrollbutton').each(function(){
+			$(this).css('top', $(this).parent('.scrollmenu').height()/2 - $(this).height()/2);
+		});
+	};
+	
+	window.addEventListener('resize', resize_window);
+	window.addEventListener('scroll', scroll_window);
+	$(window).on('load', resize_window); //Ensure window is resized after everything is loaded
+	
+	//Show scrollbuttons on hover
+	$('div.scrollmenu').on('mouseover', function()
+	{
+		if(window.innerWidth >= 950)
+			$(this).find('img.scrollbutton').stop().fadeIn();
+	});
+	
+	$('div.scrollmenu').on('mouseout', function()
+	{
+		if(window.innerWidth >= 950)
+			$(this).find('img.scrollbutton').stop().fadeOut();
+	});
+	
+	//Click scrollbuttons
+	$('img.scrollleft').on('click', function()
+	{
+		var toScroll = $(this).next('.scrollable');
+		toScroll.animate({scrollLeft: toScroll.scrollLeft() - toScroll.find('div.product').outerWidth(true)}, 500, 'swing');
+	});
+	
+	//Click scrollbuttons
+	$('img.scrollright').on('click', function()
+	{
+		var toScroll = $(this).prev('.scrollable');
+		toScroll.animate({scrollLeft: toScroll.scrollLeft() + toScroll.find('div.product').outerWidth(true)}, 500, 'swing');
+	});
+	
+	//Show product name on hover
+	$('div.product').on('mouseover', function()
+	{
+		if(window.innerWidth >= 950)
+			$(this).find('div.shadowoverlay').stop().animate({opacity: 1, bottom: 0}, 250, 'swing');
+	});
+	
+	$('div.product').on('mouseout', function()
+	{
+		if(window.innerWidth >= 950)
+			$(this).find('div.shadowoverlay').stop().animate({opacity: 0, bottom: '-3em'}, 250, 'swing');
+	});
+	
+	$('#hamburger').on('click', function()
+	{
+		if(window.innerWidth < 950)
+		{
+			$('#menu').css({'right': '-10em', 'opacity': 0}).show().animate({'right': '0', 'opacity': 1}, 250, 'swing');
+			$('body').css('overflow', 'hidden');
+		}
+	});
+	
+	$('#closemenu').on('click', function()
+	{
+		if(window.innerWidth < 950)
+		{
+			$('#menu').css({'right': 0, 'opacity': 1}).show().animate({'right': '-10em', 'opacity': 0}, 250, 'swing', function(){$('#menu').hide();});
+			$('body').css('overflow', 'auto');
+		}
+	});
+		
+</script>
+
+</html>

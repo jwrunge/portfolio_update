@@ -1,0 +1,12 @@
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<defs id="defs4">
+		<radialGradient id="radialGradient5624" gradientUnits="userSpaceOnUse" cy="1020.4" cx="32.126" r="30.496">
+			<stop id="stop5620" style="stop-color:#51ceff" offset="0"/>
+			<stop id="stop5622" style="stop-color:#006994" offset="1"/>
+		</radialGradient>
+	</defs>
+	<g id="layer1" transform="translate(0 -988.36)">
+		<circle id="path4138" r="25.496" style="stroke-linejoin:round;fill-rule:evenodd;stroke:url(#radialGradient5624);stroke-linecap:round;stroke-width:10;fill:#008cc8" cx="32.126" cy="1020.4"/>
+		<path id="path5616" style="stroke-linejoin:round;stroke:#fff;stroke-linecap:round;stroke-width:7.8904;fill:none" d="m12.603 1011.6 19.394 23.783 20.049-23.783"/>
+	</g>
+</svg>

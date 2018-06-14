@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Minimal Text</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Alegreya|Bree+Serif|Old+Standard+TT|Patua+One" rel="stylesheet"> 
+	<script src="../../js/jquery-min.js"></script>
+	<script src="../../js/velocity.min.js"></script>
+	<script src="../../js/velocity.ui.min.js"></script>
+	<script src="../../js/switchmenu_velocity.min.js"></script>
+	<link rel='stylesheet' type='text/css' href='style/core.css'/>
+</head>
+
+
+<body>
+	<div id='bg'></div>
+	<div id='header'>
+		<h1>Minimal Text #1</h1>
+		<p class='subhead'>Full image web template</p>
+	</div>
+
+	<div id='contentbox'>
+		<div id='text'>
+			<div id='box1'  class='boxes'>
+				<h2>For pages light in text</h2>
+				<p>A design for webpages that are light on text, or that 'open up' in their subpages. Background could be an image or video. Resizing to mobile creates a "two-tone" effect, splitting the page into an image section and a scrollable text section.</p>
+				<p>Background photo by Mary Runge.</p>
+			</div>
+
+			<div id='box2' class='boxes'>
+				<h2>Lorem ipsum 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum porttitor id est et placerat. Etiam ligula odio, posuere a laoreet ut, congue nec arcu. Fusce a feugiat tellus. Donec tristique, nisl non finibus semper, elit odio gravida neque, vitae facilisis eros purus ac elit. Morbi finibus nisi et porttitor eleifend. Integer scelerisque consequat augue ut blandit. Mauris consectetur sagittis vehicula. Pellentesque eget posuere mi, mollis lobortis erat. </p>
+			</div>
+
+			<div id='box3' class='boxes'>
+				<h2>Lorem ipsum 2</h2>
+				<p>Proin mollis nunc varius varius accumsan. Donec fringilla scelerisque urna in elementum. Suspendisse sollicitudin enim eget orci vestibulum pretium. Quisque ut felis eu risus luctus vulputate. Morbi facilisis risus ac vehicula fermentum. Phasellus ornare, lectus ac molestie rhoncus, diam nibh pharetra elit, vel elementum urna nisl at ex. Sed non ligula in dui pulvinar tempor sed sed elit. Curabitur feugiat sem id consequat faucibus. Maecenas eget consectetur tortor, ac facilisis magna. Etiam egestas nibh non tincidunt eleifend.</p>
+			</div>
+		</div><!--end text-->
+
+		<div id='page_position'>
+			<div id='menu'>
+				<a>About</a> | <a>Link 1</a> | <a>Link 2</a>
+			</div>
+		</div>
+
+		<img id='tl' alt='' class='decorativeborder' src='media/topleft.png'/>
+		<img id='tr' alt='' class='decorativeborder' src='media/topright.png'/>
+		<img id='bl' alt='' class='decorativeborder' src='media/bottomleft.png'/>
+		<img id='br' alt='' class='decorativeborder' src='media/bottomright.png'/>
+	</div>
+</body>
+
+<script>
+
+	global_settings = {inAnimation: 'transition.fadeIn', outAnimation: 'transition.fadeOut'};
+	var main_menu = new SwitchMenu('#menu', ['#box1', '#box2', '#box3'], {inAnimation: 'transition.fadeIn', outAnimation: 'transition.fadeOut'});
+	history.replaceState('#box1', null, '#box1');
+	
+</script>
+
+
+</html>

@@ -1,0 +1,69 @@
+/*
+	STAFF PAGE
+*/
+
+.entry {padding-right: 3%;}
+
+.staff_block
+{
+	display: inline-block;
+	width: 45%;
+	margin: .5em 0 .5em 3%;
+	text-align: center;
+}
+
+.staff_block img
+{
+	display: block;
+	float: none;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.staff_info_box
+{
+	height: 4em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.staff_name
+{
+	font-size: .8em;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.staff_title
+{
+	font-size: .8em;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+
+.staff_email
+{
+	font-size: .8em;
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 700px) 
+{
+	.staff_block
+	{
+		width: 28%;
+		margin-left: 3%;
+	}
+}
+
+@media only screen and (min-width: 1000px) 
+{
+	.staff_block
+	{
+		width: 20%;
+		margin-left: 3%;
+	}
+}

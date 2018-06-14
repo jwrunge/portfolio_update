@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Jacob Runge</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style/main.css"/>
+	
+	<!--JavaScript files-->
+    <script src="js/jquery-min.js"></script>
+</head>
+
+<body>
+	
+	<div id='bgimg'></div>
+	
+	<div id='content_body'>        
+        <div id='quote' class='main_screen'>
+			<h1>Attributions</h1>
+			<div class='submenu'></div>
+            <div class='white_bg'>
+                <div class='regular_block'>
+                    <h2>Content Credits</h2>
+                    <p>All images on this website were created by me, unless otherwise noted below.</p>
+                    <ul>
+                        <li>Ellipsis loading image (<a href='media/Ellipsis.svg'>Ellipsis.svg</a>) from <a href='www.loading.io'>loading.io</a></li>
+                        <li>Library background image (<a href='media/library_bg.jpg'>library_bg.jpg</a>) from <a href='https://www.pexels.com/'>Pexels</a></li>
+                        <li>Traffic background image (<a href='media/traffic_bg.jpg'>traffic_bg.jpg</a>) from <a href='https://www.pexels.com/'>Pexels</a></li>
+                        <li>Zoom and Red X icons (<a href='media/zoomicons.png'>zoomicons.png</a> and <a href='media/redex.png'>redex.png</a>) from <a href='https://www.flaticon.com/'>FlatIcon</a></li>
+                        <li>First United Methodist photographs taken by church staff or hired photographers and property of First United Methodist Church.</li>
+                        <li>All ofther portfolio website images are my own or attributed in-page.</li>
+                    </ul>
+                    
+                    <br/>
+                    <p><a href='index.php' class='back'>Back to portfolio</a></p>
+                </div>
+            </div>
+        </div>
+
+	</div> <!--End 'content_body'-->
+	
+	<div id='footer'>
+		&copy; 2017, Jacob W. Runge &middot; <a href='mailto:jwrunge@gmail.com'>jwrunge@gmail.com</a> &middot; All Rights Reserved. &middot; <a href='attributions.html'>Attributions</a>
+	</div>
+</body>
+
+</html>
+
+<script>
+    $('a.back').on('click', function(e)
+    {
+        e.preventDefault();
+        e.stopPropagation();
+        window.history.back();
+    })
+</script>
