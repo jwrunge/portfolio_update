@@ -1,0 +1,95 @@
+{
+    "entries": [
+    {
+        "title": "Team Management App",
+        "url": "not_available",
+        "backup": "none",
+        "created": "In progress",
+        "description": "A team management app for a client managing a service-oriented fraternity and sorority.",
+        "features": [
+            "Facebook-style post/reply feed",
+            "Messaging center notifies users via text and email as well as in-app",
+            "Administrators can create projects and post updates",
+            "Users can be assigned tasks and receive automated reminders by text and email",
+            "Administrator can create events and track users' attendance",
+            "Google and Outlook calendar syncing"
+        ],
+        "tech": [
+            "Created with the <a href='https://laravel.com/' target='_blank'>Laravel</a> PHP framework and <a href='https://vuejs.org/' target='_blank'>Vue.js</a>"
+        ]
+    },
+    {
+        "title": "Portfolio (port to Vue.js)",
+        "url": "already_there",
+        "backup": "none",
+        "created": "June 2018",
+        "description": "A port of my Portfolio site to the Vue.js front-end framework, formerly having used my own JQuery-designed SPA framework.",
+        "features": [],
+        "tech": [
+            "Created with <a href='https://vuejs.org/' target='_blank'>Vue.js</a>",
+            "Removed former dependencies on JQuery and Velocity.js",
+            "Hosting and maintenance on my VPS (LEMP stack running on Ubuntu)",
+            "HTTPS certificate via <a href='https://letsencrypt.org/' target='_blank'>Let's Encrypt</a>"
+        ]
+    },
+    {
+        "title": "FISH Food Pantry",
+        "url": "https://www.fishofgalesburg.org",
+        "backup": "none",
+        "created": "May 2018",
+        "description": "A minimalistic, primarily informative site. Clients requested online donation feature via PayPal and blog-style news post authoring.",
+        "features": [
+            "Responsive design targeting mobile devices and desktop computers",
+            "Secure login and user/role management for clients",
+            "Rich text editor for authoring news posts and uploading images",
+            "Paypal donation option for quick online donations"
+        ],
+        "notes": "Site features blog-style post features and may contain user-created content and design choices.",
+        "tech": [
+            "Created with the <a href='https://laravel.com/' target='_blank'>Laravel</a> PHP framework",
+            "Post authoring system uses <a href='https://quilljs.com/' target='_blank'>Quill.js</a> WYSIWYG editor",
+            "JPG and PNG images uploaded to the server by the user are automatically resized and compressed using <a href='https://tinypng.com/' target='_blank'>TinyPNG</a>",
+            "Hosting and maintenance on my VPS (LEMP stack running on Ubuntu)",
+            "HTTPS certificate via <a href='https://letsencrypt.org/' target='_blank'>Let's Encrypt</a>",
+            "Front-end styling using <a href='https://getbootstrap.com/' target='_blank'>Bootstrap 4</a>"
+        ]
+    },
+    {
+        "title": "Portfolio (version 1)",
+        "url": "http://www.jacobrunge.com/archived/old_portfolio",
+        "backup": "none",
+        "created": "October 2017",
+        "description": "My original portfolio site.",
+        "features": [
+            "Single-page design",
+            "One of four random video backgorunds loaded on the splash screen"
+        ],
+        "tech": [
+            "Self-made SPA logic using <a href='https://jquery.com/' target='_blank'>JQuery</a>",
+            "Dynamic content display based on URL hash",
+            "JavaScript History API used to define browser back/forward button behavior",
+            "<a href='http://velocityjs.org/' target='_blank'>Velocity.js</a> and CSS3-based animations",
+            "Back-end logic written in PHP"
+        ]
+    },
+    {
+        "title": "First United Methodist Church",
+        "url": "http://www.firstumcgalesburg.org",
+        "backup": "none",
+        "created": "2016",
+        "description": "A promotional site for First United Methodist Church designed to be a 'digital poster.'",
+        "features": [
+            "Front-page design based on FUMC vision statement (Open Hearts, Open Minds, Open Hands)",
+            "Mobile-first responsive",
+            "Custom CMS for church staff"
+        ],
+        "notes": "Site features custom CMS and may contain user-created content and design choices.",
+        "tech": [
+            "Custom CMS, login and permissions system, and dynamic page loads written in PHP",
+            "UI uses <a href='https://jquery.com/' target='_blank'>JQuery</a> animations",
+            "Rich text page editor using <a href='https://www.tinymce.com/' target='_blank'>TinyMCE</a>"
+        ]
+    },
+
+    ]
+}
