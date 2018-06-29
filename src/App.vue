@@ -12,6 +12,10 @@
     </transition>
 
     <Loader @loaded='loaded'></Loader>
+    <Modal v-if='contactModalOpen' @close='contactModalOpen = false'>
+      <Contact></Contact>
+    </Modal>
+    <PicViewer v-if='viewer.open' :source='viewer.src' @close='viewer.open = false'></PicViewer>
 
   </div>
 </template>
@@ -19,16 +23,21 @@
 <script>
   import Loader from './components/Loader'
   import Navigation from './components/Navigation'
+  import Contact from './components/Contact'
+  import PicViewer from './components/PicViewer'
+  import Modal from './components/Modal'
 
   export default {
       name: 'App',
 
-      components: { Loader, Navigation },
+      components: { Loader, Navigation, Contact, PicViewer, Modal },
 
       data () {
         return {
           allLoaded: false,
-          splashShown: false
+          splashShown: false,
+          contactModalOpen: false,
+          viewer: { open: false, src: '' }
         }
       },
 
@@ -49,6 +58,19 @@
           this.allLoaded = true
           if(this.$refs['video'])
             this.$refs['video'].play()
+        },
+
+        addEnlargeListeners() {
+          //Add event listeners for enlarging images
+          var enlargeables = document.getElementsByClassName('enlargeable')
+          for(var i=0; i<enlargeables.length; i++) {
+            enlargeables[i].addEventListener('click', this.enlargeImg)
+          }
+        },
+
+        enlargeImg(e) {
+          this.viewer.open = true
+          this.viewer.src = e.target.src
         },
 
         // Processing text
@@ -142,9 +164,9 @@
   }
 
   a {
-    color: #42c5f4;
+    color: #ff8133;
     text-decoration: none;
-    &:hover {color: #87dfff; text-decoration: underline;}
+    &:hover {color: #ffaa66; text-decoration: underline;}
   }
 
   ul
@@ -194,9 +216,10 @@
     padding: 1em .5em;
     margin: .5em;
     color: white;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 1em;
+    box-shadow: 0 2px 4px #00000088;
     transition: transform .2s ease-in-out, background-color .2s linear;
 
     &:hover { background-color: #ffaa66; }
@@ -221,10 +244,14 @@
     }
 
     img {
+      border-radius: 3px;
       display: block;
       margin: 0 auto;
-      width: 100%;
-      max-width: 45em;
+      max-width: 100%;
+      max-height: 70vh;
+      
+      &.shadowed { box-shadow: 0 2px 4px #00000088; }
+      &.enlargeable { cursor: zoom-in; }
     }
 
     .bluestrip { 
@@ -240,6 +267,7 @@
       padding: 6em 1em; 
     }
     
+    h2:first-of-type { padding-top: 0; }
     p:last-of-type { margin-bottom: 0; } 
 
     &.small_bottom { padding-bottom: 2em; }
@@ -256,7 +284,12 @@
     left: 10em;
   }
 
-  .page-in-enter-to {
+  .page-in-leave-to {
+    opacity: 0;
+    left: -10em;
+  }
+
+  .page-in-enter-to, .page-in-leave {
     opacity: 1;
     left: 0;
   }

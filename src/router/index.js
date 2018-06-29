@@ -33,6 +33,5 @@ export default new Router({
       name: 'Portfolio',
       component: Portfolio
     }
-
   ]
 })

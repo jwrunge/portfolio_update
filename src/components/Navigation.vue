@@ -1,7 +1,7 @@
 <template>
     <div id='nav'>
         <transition name='navtrans' mode='out-in' appear>
-            <div id='nav_bar' key='fullnav' v-if='shown' @mouseleave='shown = false'>      
+            <div id='nav_bar' key='fullnav' v-if='shown' @mouseleave='shown = false'> 
                 <router-link to='/about'>About</router-link>
                 <router-link to='/services'>Services</router-link>
                 <router-link to='/portfolio'>Portfolio</router-link>
@@ -27,7 +27,7 @@
 
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 
     #nav {
         position: fixed;
@@ -40,8 +40,15 @@
         a {
             color: white;
             margin: 1em;
+            padding: .5em; 
 
             &:hover{ color: #fff991; }
+            &.router-link-active {
+                background-color: #ff8133;
+                border-radius: 3px;
+                box-shadow: 0 2px 4px #00000088;
+                &:hover { color: white; text-decoration: none; }
+            }
         }
     }
 
@@ -52,6 +59,7 @@
         background-color: #03587c;
         transition: top .2s ease-in-out, opacity .2s ease-in-out;
         box-shadow: 0 0 10px #000000;
+        overflow: hidden;
     }
 
     #nav_mouseover {

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1000 1000"
+   enable-background="new 0 0 1000 1000"
+   xml:space="preserve"
+   id="svg8"
+   sodipodi:docname="xout.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"><defs
+     id="defs12" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="0.944"
+     inkscape:cx="315.96468"
+     inkscape:cy="536.09104"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" /><metadata
+     id="metadata2"> Svg Vector Icons : http://www.onlinewebfonts.com/icon <rdf:RDF><cc:Work
+     rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><g
+     id="g6"
+     transform="matrix(0.8211443,0,0,0.8211443,90.176905,87.18069)"
+     style="fill:#999999"><path
+       d="M 549,500 979.5,69.5 c 14,-14 14,-35 0,-49 -14,-14 -35,-14 -49,0 L 500,451 69.5,20.5 c -14,-14 -35,-14 -49,0 -14,14 -14,35 0,49 L 451,500 20.5,930.5 c -14,14 -14,35 0,49 7,7 17.5,10.5 24.5,10.5 7,0 17.5,-3.5 24.5,-10.5 L 500,549 930.5,979.5 c 7,7 17.5,10.5 24.5,10.5 7,0 17.5,-3.5 24.5,-10.5 14,-14 14,-35 0,-49 z"
+       id="path4"
+       inkscape:connector-curvature="0"
+       style="fill:#999999" /></g></svg>

@@ -4,7 +4,7 @@
         <div id='right_shutter' ref='right_shutter'></div>
         <div id='setup_loading' ref='setup_loading'>
             <p>Getting set up</p>
-            <svg viewBox="0 0 110 100" xmlns="http://www.w3.org/2000/svg">
+            <svg ref='ellipsis' viewBox="0 0 110 100" xmlns="http://www.w3.org/2000/svg">
                 <circle cy='50' cx='35' r='5' fill='#222' id='one'/>
                 <circle cy='50' cx='90' r='10' fill='#aaa' id='four'/>
                 <circle cy='50' cx='20' r='10' fill='#aaa' id='two'/>
@@ -31,14 +31,19 @@
         },
 
         mounted() {
-            var elone = document.getElementById('one')
-            var eltwo = document.getElementById('two')
-            var elthree = document.getElementById('three')
-            var elfour = document.getElementById('four')
-            TweenMax.to(elone, .7, { attr:{ r: 10, cx: 20, fill: '#aaa' }, repeat: -1, ease: Power2.easeInOut })
-            TweenMax.to(eltwo, .7, { attr:{ r: 13, cx: 55, fill: '#fff' }, repeat: -1, ease: Power2.easeInOut })
-            TweenMax.to(elthree, .7, { attr:{ r: 10, cx: 90, fill: '#aaa' }, repeat: -1, ease: Power2.easeInOut })
-            TweenMax.to(elfour, .7, { attr:{ r: 5, cx: 80, fill: '#222' }, repeat: -1, ease: Power2.easeInOut })
+            try{
+                var elone = document.getElementById('one')
+                var eltwo = document.getElementById('two')
+                var elthree = document.getElementById('three')
+                var elfour = document.getElementById('four')
+                TweenMax.to(elone, .7, { attr:{ r: 10, cx: 20, fill: '#aaa' }, repeat: -1, ease: Power2.easeInOut })
+                TweenMax.to(eltwo, .7, { attr:{ r: 13, cx: 55, fill: '#fff' }, repeat: -1, ease: Power2.easeInOut })
+                TweenMax.to(elthree, .7, { attr:{ r: 10, cx: 90, fill: '#aaa' }, repeat: -1, ease: Power2.easeInOut })
+                TweenMax.to(elfour, .7, { attr:{ r: 5, cx: 80, fill: '#222' }, repeat: -1, ease: Power2.easeInOut })
+            }
+            catch(err) {
+                console.log('GreenSock animation library failed to load or is unsupported; some animations will not work properly.')
+            }
         },
 
         beforeDestroy() {

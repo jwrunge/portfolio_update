@@ -1,5 +1,5 @@
 <template>
-    <div id='nav'>
+    <div id='nav' class='page'>
       <svg id="signature_svg" ref='signature' viewBox="0 0 1900 1300" xmlns="http://www.w3.org/2000/svg">
         <!--Ja--> <path class='sigJa' stroke-dasharray="4295" stroke-dashoffset="0"
             d="M622.85 552.34c-45.62-79.51-56.05-101.02-78.208-117.31-63.87-46.925-70.387-46.273-79.51-49.532-72.995-39.104-128.91-62.12-128.91-62.12s89.155 48.434 154.98 62.12c41.71 7.82 86.19-13.198 95.152-18.248 27.7-14.827 71.14-46.432 110.79-91.242 18.736-21.173 34.28-45.73 50.835-80.815s19.11-66.6 18.24-101.67c-.18-7.23-1.42-14.072-11.73-18.248-12.85-5.2-20.51 7.795-35.2 22.16s-40.41 51.483-70.39 102.97c-29.98 51.49-86.03 174.66-86.03 174.66s-157.81 348.6-264.6 567.01c-82.98 149.67-99.96 177.84-149.81 248.74-36.19 51.464-55.28 66.716-88.73 62.79-41.83-4.91-45.62-69.085-48.23-93.85-7.82-61.263-9.12-109.49-1.3-177.27 13.03-84.725 25.75-129.36 60.4-217.68 50.39-100.14 119.47-191.61 165.09-243.75 46.92-46.925 71.69-69.083 125.13-110.79C409.06 381.59 448 384.36 461.2 382.892c19.226-.978 45.025 14.47 124.75-10.875 16.59-23.964 24.74-38.578 39.486-39.96 10.6 8.295 28.53 5.28 23.46 11.73-5.07 1.844-7.33-10.888-23.46-10.427-17.05 5.99-24.987 13.262-39.104 35.193-14.116 21.932-27.595 45.605-31.282 99.063 1.843 36.867 10.11 38.024 15.64 41.71 29.496-2.303 35.26-24.96 41.71-44.317 10.14-31.8 26.07-86.03 26.07-86.03s-20.63 58.74-16.943 95.15c12.907 32.26 15.17 25.13 23.465 33.89 18.896 1.84 35.194-44.32 35.194-44.32"/>
@@ -44,32 +44,35 @@ export default {
         window.addEventListener('resize', this.positionLinks)
 
         if(!this.$parent.splashShown) {
-            //Animate the signature
-            var sigJa = document.getElementsByClassName('sigJa')[0]
-            var sigC = document.getElementsByClassName('sigC')[0]
-            var sigO = document.getElementsByClassName('sigO')[0]
-            var sigB = document.getElementsByClassName('sigB')[0]
-            var sigR1 = document.getElementsByClassName('sigR1')[0]
-            var sigR2 = document.getElementsByClassName('sigR2')[0]
-            var sigUnge = document.getElementsByClassName('sigUnge')[0]
-            var sigLine = document.getElementsByClassName('sigLine')[0]
+            try {
+                //Animate the signature
+                var sigJa = document.getElementsByClassName('sigJa')[0]
+                var sigC = document.getElementsByClassName('sigC')[0]
+                var sigO = document.getElementsByClassName('sigO')[0]
+                var sigB = document.getElementsByClassName('sigB')[0]
+                var sigR1 = document.getElementsByClassName('sigR1')[0]
+                var sigR2 = document.getElementsByClassName('sigR2')[0]
+                var sigUnge = document.getElementsByClassName('sigUnge')[0]
+                var sigLine = document.getElementsByClassName('sigLine')[0]
 
-            var timeline = new TimelineMax()
-            timeline.set('path', { 'visibility': 'hidden'}) //Hide because IE and Edge show little dots at the start of each stroke
-            timeline.eventCallback('onComplete', this.signatureComplete)
-            timeline.set(sigJa, { 'visibility': 'visible'}).from(sigJa, .7, { attr:{ 'stroke-dashoffset': 4295 }, ease: Power1.easeOut }).delay(1)
-            timeline.set(sigC, { 'visibility': 'visible'}).from(sigC, .1, { attr:{ 'stroke-dashoffset': 247 }, ease: Power1.easeIn })
-            timeline.from({}, .1, {})
-            timeline.set(sigO, { 'visibility': 'visible'}).from(sigO, .15, { attr:{ 'stroke-dashoffset': 348 }, ease: Power1.easeIn })
-            timeline.from({}, .1, {})
-            timeline.set(sigB, { 'visibility': 'visible'}).from(sigB, .3, { attr:{ 'stroke-dashoffset': 638 }, ease: Power2.easeOut })
-            timeline.from({}, .1, {})
-            timeline.set(sigR1, { 'visibility': 'visible'}).from(sigR1, .1, { attr:{ 'stroke-dashoffset': 317 }, ease: Power2.easeInOut })
-            timeline.from({}, .05, {})
-            timeline.set(sigR2, { 'visibility': 'visible'}).from(sigR2, .3, { attr:{ 'stroke-dashoffset': 1430 }, ease: Power2.easeInOut })
-            timeline.set(sigUnge, { 'visibility': 'visible'}).from(sigUnge, 1.1, { attr:{ 'stroke-dashoffset': 2118 }, ease: Power0.easeOut })
-            timeline.from({}, .3, {})
-            timeline.set(sigLine, { 'visibility': 'visible'}).from(sigLine, .15, { attr:{ 'stroke-dashoffset': 1235 }, ease: Power2.easeInOut })
+                var timeline = new TimelineMax()
+                timeline.set('path', { 'visibility': 'hidden'}) //Hide because IE and Edge show little dots at the start of each stroke
+                timeline.eventCallback('onComplete', this.signatureComplete)
+                timeline.set(sigJa, { 'visibility': 'visible'}).from(sigJa, .7, { attr:{ 'stroke-dashoffset': 4295 }, ease: Power1.easeOut }).delay(1)
+                timeline.set(sigC, { 'visibility': 'visible'}).from(sigC, .1, { attr:{ 'stroke-dashoffset': 247 }, ease: Power1.easeIn })
+                timeline.from({}, .1, {})
+                timeline.set(sigO, { 'visibility': 'visible'}).from(sigO, .15, { attr:{ 'stroke-dashoffset': 348 }, ease: Power1.easeIn })
+                timeline.from({}, .1, {})
+                timeline.set(sigB, { 'visibility': 'visible'}).from(sigB, .3, { attr:{ 'stroke-dashoffset': 638 }, ease: Power2.easeOut })
+                timeline.from({}, .1, {})
+                timeline.set(sigR1, { 'visibility': 'visible'}).from(sigR1, .1, { attr:{ 'stroke-dashoffset': 317 }, ease: Power2.easeInOut })
+                timeline.from({}, .05, {})
+                timeline.set(sigR2, { 'visibility': 'visible'}).from(sigR2, .3, { attr:{ 'stroke-dashoffset': 1430 }, ease: Power2.easeInOut })
+                timeline.set(sigUnge, { 'visibility': 'visible'}).from(sigUnge, 1.1, { attr:{ 'stroke-dashoffset': 2118 }, ease: Power0.easeOut })
+                timeline.from({}, .3, {})
+                timeline.set(sigLine, { 'visibility': 'visible'}).from(sigLine, .15, { attr:{ 'stroke-dashoffset': 1235 }, ease: Power2.easeInOut })
+            }
+            catch(err) { this.signatureComplete() } //In case the CDN fails
         }
         else {
             this.positionLinks()
@@ -109,7 +112,7 @@ export default {
   #signature_svg
   {
       width: 90%;
-      max-width: 300px;
+      max-width: 20em;
       position: relative;
 
       @media screen and (max-width: 500px) {
@@ -145,11 +148,11 @@ export default {
       @media screen and (max-width: 500px) {
           
           top: 45vh;
+          text-align: center;
 
           a {
               display: block;
-              font-size: 1.5em;
-              margin-top: .5em;
+              margin-top: 1.5em;
           }
       }
   }
