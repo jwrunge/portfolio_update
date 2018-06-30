@@ -88,7 +88,7 @@ export default {
             var sigtop = this.$refs['signature'].getBoundingClientRect().top
             var sigbot = this.$refs['signature'].getBoundingClientRect().bottom
             var sigheight = sigbot - sigtop
-            this.$refs['top_links'].style.top = sigtop + sigheight/2.2 + 'px'
+            this.$refs['top_links'].style.top = sigtop + sigheight/2 + 'px'
         }
     }
 }
@@ -136,13 +136,14 @@ export default {
       top: 55%;
 
       a {
+          font-size: 1.5em;
           position: relative;
           margin: 0 .25em;
           color: white;
           text-decoration: none;
           transition: left .5s ease-in-out, opacity .5s ease-in-out;
 
-          &:hover { color: #fff991; }
+          &:hover { color: #ffaa66; }
       }
 
       @media screen and (max-width: 500px) {

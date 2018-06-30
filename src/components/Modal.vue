@@ -53,7 +53,7 @@
         width: 95%;
         max-width: 45em;
         margin: 1em auto;
-        border-radius: 3px;
+        border-radius: 2px;
         max-height: 90vh;
         position: relative;
 

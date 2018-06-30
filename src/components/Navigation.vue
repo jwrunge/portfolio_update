@@ -42,10 +42,10 @@
             margin: 1em;
             padding: .5em; 
 
-            &:hover{ color: #fff991; }
+            &:hover{ color: #ffaa66; }
             &.router-link-active {
                 background-color: #ff8133;
-                border-radius: 3px;
+                border-radius: 2px;
                 box-shadow: 0 2px 4px #00000088;
                 &:hover { color: white; text-decoration: none; }
             }

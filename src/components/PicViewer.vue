@@ -70,7 +70,7 @@
         display: block;
         width: 95%;
         margin: 1em auto;
-        border-radius: 3px;
+        border-radius: 2px;
         max-height: 90vh;
         overflow: auto;
         position: relative;
@@ -86,7 +86,7 @@
             min-width: 100%;
             max-width: 300%;
             max-height: 200vh;
-            border-radius: 3px;
+            border-radius: 2px;
             transition: all .5s ease-in-out;
 
             &.fit {
@@ -126,7 +126,7 @@
         margin: 0 auto;
         z-index: 3001;
         background-color: white;
-        border-radius: 3px;
+        border-radius: 2px;
         box-shadow: 0 2px 4px #00000088;
         transition: background-color .5s, opacity .5s;
         

@@ -8,7 +8,7 @@
     </video>
     
     <transition name='page-in' mode='out-in'>
-      <router-view v-if='allLoaded'></router-view>
+      <router-view v-if='allLoaded' :entries='entries'></router-view>
     </transition>
 
     <Loader @loaded='loaded'></Loader>
@@ -37,8 +37,13 @@
           allLoaded: false,
           splashShown: false,
           contactModalOpen: false,
-          viewer: { open: false, src: '' }
+          viewer: { open: false, src: '' },
+          entries: {}
         }
+      },
+
+      created() {
+        this.getPortfolioEntries()
       },
 
       computed: {
@@ -71,6 +76,20 @@
         enlargeImg(e) {
           this.viewer.open = true
           this.viewer.src = e.target.src
+        },
+
+        //Get portfolio entries
+        getPortfolioEntries() {
+          var context = this
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', '/static/data/portfolio_entries.json', true);
+          xhr.responseType = 'json';
+          xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+              context.entries = xhr.response
+            }
+          };
+          xhr.send();
         },
 
         // Processing text
@@ -216,7 +235,7 @@
     padding: 1em .5em;
     margin: .5em;
     color: white;
-    border-radius: 3px;
+    border-radius: 2px;
     cursor: pointer;
     font-size: 1em;
     box-shadow: 0 2px 4px #00000088;
@@ -244,7 +263,7 @@
     }
 
     img {
-      border-radius: 3px;
+      border-radius: 2px;
       display: block;
       margin: 0 auto;
       max-width: 100%;

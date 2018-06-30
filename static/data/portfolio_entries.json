@@ -1,7 +1,9 @@
 {
-    "entries": [
+    "sites": [
     {
-        "title": "Team Management App",
+        "title": "Team Management App (in progress)",
+        "src": "/static/site-thumbnails/assorted.jpg",
+        "alt": "Team management app image",
         "url": "not_available",
         "backup": "none",
         "created": "In progress",
@@ -20,6 +22,8 @@
     },
     {
         "title": "Portfolio (port to Vue.js)",
+        "src": "/static/site-thumbnails/portfolio.jpg",
+        "alt": "Revised portfolio site image",
         "url": "already_there",
         "backup": "none",
         "created": "June 2018",
@@ -34,6 +38,8 @@
     },
     {
         "title": "FISH Food Pantry",
+        "src": "/static/site-thumbnails/fish.jpg",
+        "alt": "FISH Food Pantry site image",
         "url": "https://www.fishofgalesburg.org",
         "backup": "none",
         "created": "May 2018",
@@ -56,6 +62,8 @@
     },
     {
         "title": "Portfolio (version 1)",
+        "src": "/static/site-thumbnails/portfolio.jpg",
+        "alt": "Original portfolio site image",
         "url": "http://www.jacobrunge.com/archived/old_portfolio",
         "backup": "none",
         "created": "October 2017",
@@ -74,6 +82,8 @@
     },
     {
         "title": "First United Methodist Church",
+        "src": "/static/site-thumbnails/FUMC.jpg",
+        "alt": "First United Methodist Church site image",
         "url": "http://www.firstumcgalesburg.org",
         "backup": "none",
         "created": "2016",
@@ -89,7 +99,7 @@
             "UI uses <a href='https://jquery.com/' target='_blank'>JQuery</a> animations",
             "Rich text page editor using <a href='https://www.tinymce.com/' target='_blank'>TinyMCE</a>"
         ]
-    },
+    }
 
     ]
 }

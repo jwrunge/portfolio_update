@@ -26,7 +26,7 @@
                 setTimeout(function(){ 
                     context.openAll()
                     context.$emit("loaded")
-                 }, 2000);
+                 }, 1000);
             })
         },
 
